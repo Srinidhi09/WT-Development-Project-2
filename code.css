@@ -1,0 +1,125 @@
+@CHARSET "ISO-8859-1";
+
+.image:hover img {
+	-webkit-transform: scale(1.15); /* Safari and Chrome */
+	-moz-transform: scale(1.15); /* Firefox */
+	-ms-transform: scale(1.15); /* IE 9 */
+	-o-transform: scale(1.15); /* Opera */
+	transform: scale(1.15);
+	
+}
+.tab1 {
+	
+	text-align: center;
+}
+nav ul {
+	list-style-type: none;
+  padding: 1em;
+  margin: 0;
+  width: 10em;
+  float: left;
+	border-right: 1px dotted grey;
+	height: 20em;
+	margin-top: 2em;
+}
+
+h1 {
+	font-family: Verdana, Geneva, sans-serif;
+}
+nav ul li {
+  margin: 0.5em 0;
+  padding: 0.3em;
+  background: black;
+  color: white;
+  text-align:left;
+}
+
+nav li a { text-decoration: none; }
+nav li a:link {color:white;}      /* unvisited link */
+nav li a:visited {color:white;}  /* visited link */
+nav li a:active {color:#0000FF;}  /* selected link */
+
+nav li.current {
+	width: 16em;
+	text-align:left;
+}
+
+nav li.current a {
+	margin-left: 9em;
+	font-weight: bold;
+}
+
+.tech {
+ border: 2px solid black;
+    border-collapse: collapse;
+	width: 80%;
+}
+
+th, td {
+	text-align: left;
+	padding: 2px;
+	height: 25px;
+}
+
+.skil {
+	font-size: 120%;
+	color: blue;
+}
+bio{
+	align: center;
+}
+div.content {
+	float: left;
+	margin: 0;
+	padding: 0;
+	/*margin-left: 9em;
+	margin-top: 1.8em;*/
+  max-width: 80%;
+}
+
+/*div.content div {
+  padding: 20px;
+}*/
+
+
+footer {
+	clear: both;
+  font-style: italic;
+  color: grey;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.send {
+    position: absolute;
+    top: 80%;
+    left: 31%;
+}
+/* rules for smaller screens: */
+@media only screen and (max-width: 800px) {
+    /* rules that only apply for screens narrower than 800px */
+    nav ul {
+      clear: both; /* clear space around (left and right side), this pushes other elements downward */
+      padding: 0.5em;
+      margin: 0;
+      height: 10em;
+    }
+    div.content a {
+      font-size:150%;
+      padding: 0.5em;
+    }
+    h1 {
+      margin-top:0;
+    }
+    nav li a:hover {color:white;}  /* mouse over link */
+    div.content {
+      margin: 0;
+      padding: 0;
+      clear: both;
+    }
+    footer {
+      margin: 0.5em;
+    }
+} /* /@media */

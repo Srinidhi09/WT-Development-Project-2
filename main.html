@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="description"
+	content="A sample resume that portays professional technical skills and background">
+<meta name="keywords"
+	content="resume, porfolio, cover letter, skills, education, academic, experience, gpa, university, format, model, sample, template, example, tips, interviews, job, search, career, guide, professional, download">
+<meta name="author" content="Srinidhi Karnati">
+<title>Srinidhi Karnati</title>
+<link rel="stylesheet" href="code.css">
+<script type="text/javascript" src="code.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+
+function home(){
+	document.getElementById("content").src="home.html";	
+}
+function bio(){
+	document.getElementById("content").src="bio.html";
+	
+}
+function resume(){
+	document.getElementById("content").src="resume.html";
+	
+}
+function contact(){
+	document.getElementById("content").src="contact.html";
+	
+}
+</script>
+</head>
+<body>
+<div>
+<nav>
+<ul>
+  <li><a href="#" class ="home1" onclick = "home()">Home</a>
+  <li><a href="#" class ="bio1" onclick = "bio()">Bio</a>
+  <li><a href="#" class ="resume1" onclick = "resume()">Resume</a>
+  <li><a href="#" class ="contact1" onclick = "contact()">Contact</a>
+</ul>
+</nav>
+<br>
+<iframe id ="content" src="home.html" width="1000" height="550">
+</iframe>
+
+</div>
+</body>
+</html>

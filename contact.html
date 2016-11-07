@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Contact</title>
+<link rel="stylesheet" href="code.css">
+<script type="text/javascript" src="code.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+$(document).ready(function()
+		{		
+		 $.getJSON("data.json",function(json)
+		   {
+
+			 $.each(json.contactType,function(key,value)
+		         {
+		             var option = $('<option />').val(key).text(value);
+		        $("#dropDownDest").append(option);
+		         });
+
+		    });  
+		});
+</script>
+<style>
+button {
+	width: 380px;
+	height: 45px;
+}
+</style>
+</head>
+<body style="background-image: url(sample.jpg)">
+	<div id="tab4" align="center">
+		<!-- page 4 -->
+
+		<form>
+			
+				<h1 style="font-color: #05061c;">Contact Form</h1>
+				<h3>For queries, please feel free to contact me through
+					this form!</h3>
+				Reason of contact: <select id="dropDownDest">
+				</select>
+		
+				<br> <br> 
+				<input type="text" id="name" name="sender name"
+					size="48" placeholder="What's your name?" value="" align="center"
+					width="100" height="100" pattern ="^[a-zA-Z][0-9a-zA-Z .,'-]*$" required /> <br>
+				<br>
+			
+			<input
+					type="text" id="email" name="sender email"
+					size="48" placeholder="What's your e-mail address?" value=""
+					align="center" width="100" height="100" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required/>
+					
+				<br><br>
+				
+
+			<input type="text" name="subject" size="48"
+				placeholder="Enter Subject" value="" class="radius" align="center"
+				width="100" height="100" required /> <br>
+			<br>
+			<textarea rows="10" cols="50" name="message"
+				placeholder="Enter your message here..." value="" class="radius"
+				align="center" width="100" height="100" required></textarea>
+			<br>
+			<br>
+	</div><br><br>
+	<div class="wrapper">
+    <button class="send" type="submit" value="Submit"
+		style="font-size: 15pt; color: white; background-color: #05061c;">Send!</button>
+</div>
+
+	</form>
+
+
+	
+	<!-- /tab4 -->
+</body>
+</html>
